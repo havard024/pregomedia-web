@@ -1,0 +1,297 @@
+<h1>Form view</h1>
+<style>
+	.required {
+		color: red;
+	}
+</style>
+<form name="form" class="form-horizontal" role="form">
+	<div class="form-group">
+		<label for="organization_name" class="col-sm-2 control-label">
+			<span class="required" ng-show="form.organization_name.$error.required">*</span>
+			Organization Name
+		</label>
+		<div class="col-sm-10">
+			<input type="text" name="organization_name" class="form-control" ng-model="data.organization_name" required />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="website" class="col-sm-2 control-label">
+			Website
+		</label>
+		<div class="col-sm-10">
+			<input type="text" name="website" class="form-control" ng-model="data.website" /> 
+		</div>
+	</div>
+
+	<div class="form-group">	
+	<label for="primary_phone" class="col-sm-2 control-label">
+		Primary Phone
+	</label>
+	<div class="col-sm-10">
+		 <input type="number" name="primary_phone" class="form-control" ng-model="data.primary_phone_number" />
+	</div>
+	</div>
+	
+	<div class="form-group">
+	<label for="ticker_symbol" class="col-sm-2 control-label">	
+		Ticker Symbol
+	</label>
+	<div class="col-sm-10">
+		<input type="" name="ticker_symbol" class="form-control" ng-model="data.ticker_symbol" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="fax" class="col-sm-2 control-label">
+		Fax
+	</label>
+	<div class="col-sm-10">
+		<input type="" name="fax" class="form-control" ng-model="data.fax_number" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="member_of" class="col-sm-2 control-label">
+	Member Of
+	</label>
+	<div class="col-sm-10">
+		<input type="" name="member_of" class="form-control" ng-model="data.member_of" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="secondary_phone" class="col-sm-2 control-label">
+		Secondary Phone
+	</label>
+	<div class="col-sm-10">
+		<input type="number" name="secondary_phone" class="form-control" ng-model="data.secondary_phone_number" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="employees" class="col-sm-2 control-label">
+		Employees
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="employees" class="form-control" ng-model="data.employees" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="primary_email" class="col-sm-2 control-label">
+		Primary Email
+	</label>
+	<div class="col-sm-10">
+		 <input type="email" name="primary_email" class="form-control" ng-model="data.primary_email" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="secondary_email" class="col-sm-2 control-label">
+		Secondary Email
+	</label>
+	<div class="col-sm-10">
+		 <input type="" name="secondary_email" class="form-control" ng-model="data.secondary_email" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="ownership" class="col-sm-2 control-label">
+		Ownership
+	</label>
+	<div class="col-sm-10">
+		 <input type="" name="ownership" class="form-control" ng-model="data.ownership" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="industry" class="col-sm-2 control-label">
+		Industry
+	</label>
+	<div class="col-sm-10">
+		 <select name="industry" class="form-control" ng-model="data.industry" ng-options="industry.name for industry in data.industries" placeholder="Select An Option"></select>
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="rating" class="col-sm-2 control-label">
+		Rating
+	</label>
+	<div class="col-sm-10">
+		 <select name="rating" class="form-control" ng-model="data.rating" ng-options="rating.name for rating in data.ratings"></select>
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="type" class="col-sm-2 control-label">
+		Type
+	</label>
+	<div class="col-sm-10">
+		 <select name="type" class="form-control" ng-model="data.type" ng-options="type.name for type in data.types"></select>
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="sic_code" class="col-sm-2 control-label">
+		SIC Code
+	</label>
+	<div class="col-sm-10">
+		 <input type="text" name="sic_code" class="form-control" ng-model="data.sic_code"/>
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="email_opt_out" class="col-sm-2 control-label">
+		Email Opt Out 
+	</label>
+	<div class="col-sm-10">
+		<input type="checkbox" name="email_opt_out" class="form-control" ng-model="data.email_opt_out" />
+
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="annual_revenue" class="col-sm-2 control-label">
+		Annual Revenue
+	</label>
+	<div class="col-sm-10">
+		 <input type="text" name="annual_revenue" class="form-control" ng-model="data.annual_revenue" />kr
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label name="assigned_to" class="form-control" class="col-sm-2 control-label">
+		<span class="required" ng-show="form.assigned_to.$error.required">*</span>
+		Assigned To
+	</label>
+	<div class="col-sm-10">
+		 <input type="text" name="assigned_to" class="form-control" ng-model="data.assigned_to" required />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="notify_owner" class="col-sm-2 control-label">
+	Notify Owner
+	</label>
+	<div class="col-sm-10">
+		 <input type="checkbox" name="notify_owner" class="form-control" ng-model="data.checkbox" />
+	</div>
+	</div>
+
+	<input type="button" ng-click="copyShipping()" value="Copy Shipping" /> <br />
+
+	<div class="form-group">
+	<label for="billing_address" class="col-sm-2 control-label">
+		Billing Address
+	</label>
+	<div class="col-sm-10">
+		 <input type="text" name="billing_address" class="form-control" ng-model="data.billing_address" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="billing_po_box" class="col-sm-2 control-label">
+		Billing PO Box
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="billing_po_box" class="form-control" ng-model="data.billing_po_box" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="billing_city" class="col-sm-2 control-label">
+		Billing City
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="billing_city" class="form-control" ng-model="data.billing_city">
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="billing_state" class="col-sm-2 control-label">
+		Billing State
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="billing_state" class="form-control" ng-model="data.billing_state" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="billing_postal_code" class="col-sm-2 control-label">
+		Billing Postal Code
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="billing_postal_code" class="form-control" ng-model="data.billing_postal_code" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	 <label for="billing_country" class="col-sm-2 control-label">
+		Billing Country
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="billing_country" class="form-control" ng-model="data.billing_country" />
+	</div>
+	</div>
+
+	<input type="button" ng-click="copyBilling()" value="Copy Billing" /> <br />
+
+	<div class="form-group">
+	<label for="shipping_address" class="col-sm-2 control-label">
+		Shipping Address
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="shipping_address" class="form-control" ng-model="data.shipping_address" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="shipping_po_box" class="col-sm-2 control-label">
+		Shipping PO Box
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="shipping_po_box" class="form-control" ng-model="data.shipping_po_box" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="shipping_city" class="col-sm-2 control-label">
+		Shipping City
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="shipping_city" class="form-control" ng-model="data.shipping_city" /> 
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="shipping_state" class="col-sm-2 control-label">
+		Shipping State
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="shipping_state" class="form-control" ng-model="data.shipping_state" />
+	</div>
+	</div>
+
+	<div class="form-group">
+	<label for="shipping_postal_code" class="col-sm-2 control-label">
+		Shipping Postal Code
+	</label>
+	<div class="col-sm-10">
+		<input type="text" name="shipping_postal_code" class="form-control" ng-model="data.shipping_postal_code" />
+	</div>
+	</div>
+
+	<div class="form-group">
+		<label for="shipping_country" class="col-sm-2 control-label">
+		Shipping Country
+		</label>
+		<div class="col-sm-10">
+			<input type="text" name="shipping_country" class="form-control" ng-model="data.shipping_country" />
+		</div>
+	</div>
+
+	<button>Submit</button>
+
+	<ui-view="list" />
+</form>
